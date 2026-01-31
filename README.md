@@ -1,4 +1,4 @@
-# Casa Ceci - Sitio Web
+# Helen Aloja - Sitio Web
 
 Pequeño sitio web para un alojamiento de alquiler temporal, implementado con HTML5, CSS3 y JavaScript puro.
 
