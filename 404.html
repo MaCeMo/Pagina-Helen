@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Error 404 — Página no encontrada</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="imagenes/icono.png" type="image/png" />
+</head>
+<body>
+  <header id="site-header">
+    <div class="site-top container">
+      <div class="logo-container">
+        <a href="sobre-nosotros.html" class="brand" aria-label="Helen Aloja — sobre nosotros">
+          <img src="imagenes/logotrans.png" alt="Helen Aloja — logo" class="logo" />
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" type="button">
+        <span class="nav-toggle__icon" aria-hidden="true">☰</span>
+        <span class="visually-hidden">Abrir menú</span>
+      </button>
+
+      <nav id="primary-nav" class="nav-menu" role="navigation" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="alojamiento.html">Alojamiento</a></li>
+          <li><a href="reservas.html">Reservas</a></li>
+          <li><a href="ubicacion.html">Ubicación</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="error-404" aria-labelledby="err-404-title">
+      <div class="center-panel">
+        <div class="error-visual" aria-hidden="true">
+          <!-- simple ilustración SVG inline (sin recursos externos) -->
+          <svg width="220" height="140" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+            <rect width="220" height="140" rx="12" fill="#fff" opacity="0.06"/>
+            <g transform="translate(24,18)" fill="none" stroke="#fff" stroke-width="2">
+              <path d="M8 80 L32 48 L56 80" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+              <rect x="64" y="40" width="56" height="40" rx="6" opacity="0.6"/>
+              <circle cx="160" cy="70" r="14" opacity="0.6"/>
+              <path d="M168 78 L182 92" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="error-content">
+          <h1 id="err-404-title">Página no encontrada</h1>
+          <p>Lo sentimos — la página que buscas no existe o fue movida. Podés volver al inicio o comprobar que la dirección esté correcta.</p>
+          <p>
+            <a class="btn" href="index.html">Volver al inicio</a>
+            <a class="btn btn-ghost" href="contacto.html" style="margin-left:.6rem;">Contactar</a>
+          </p>
+          <p class="muted" style="margin-top:.6rem;font-size:.95rem;color:rgba(255,255,255,0.85);">Si escribiste la URL manualmente, revisala por errores tipográficos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer">
+    <footer>
+      <p>© 2026 Helen Aloja. Todos los derechos reservados.</p>
+      <p>Contacto: <a href="mailto:info@helenaloja.com">info@helenaloja.com</a></p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

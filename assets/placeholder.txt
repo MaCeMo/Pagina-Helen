@@ -1,0 +1,2 @@
+Coloca aquí las imágenes del alojamiento (ej: sala.jpg, habitacion.jpg, terraza.jpg).
+En las páginas HTML se han usado imágenes de ejemplo desde picsum.photos; reemplázalas por archivos locales si lo deseas.

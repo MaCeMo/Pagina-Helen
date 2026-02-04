@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helen - Alojamiento</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="imagenes/icono.png" type="image/png" />
+</head>
+<body>
+  <div id="site-header">
+    <div class="site-top">
+      <div class="brand">
+        <a href="sobre-nosotros.html" class="logo-link" aria-label="Helen Aloja — sobre nosotros">
+          <img src="imagenes/logo helen.png" alt="Helen Aloja" class="logo">
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="alojamiento.html" class="nav-link active">Alojamiento</a>
+        <a href="reservas.html" class="nav-link">Reservas</a>
+        <a href="ubicacion.html" class="nav-link">Ubicación</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="details">
+      <p style="text-align: center; color: black; margin-bottom: 2rem;">Explora los detalles de Helen Aloja</p>
+
+      <!-- Acordeón -->
+      <div class="accordion">
+        <!-- Sección 1: Alojamiento -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="panel-alojamiento">
+            <span class="accordion-title">🏠 Alojamiento</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body" id="panel-alojamiento" role="region" aria-labelledby="header-alojamiento">
+            <div class="accordion-content">
+              <p>Helen es un duplex totalmente equipado para estancias cortas. Cuenta con dos habitaciones, baño completo, con kitchenette y un escritorio.</p>
+              <p><strong>Características principales:</strong></p>
+              <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                <li>Duplex con 2 habitaciones amplias</li>
+                <li>Baño completo y moderno</li>
+                <li>Kitchenette equipada</li>
+                <li>Escritorio de trabajo</li>
+                <li>Sala y comedor integrados</li>
+                <li>Iluminación natural óptima</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 2: Comodidades -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="panel-comodidades">
+            <span class="accordion-title">✨ Comodidades</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body" id="panel-comodidades" role="region" aria-labelledby="header-comodidades">
+            <div class="accordion-content">
+              <ul class="amenities-accordion">
+                <li>📶 Wi-Fi alta velocidad</li>
+                <li>🍳 Cocina equipada</li>
+                <li>📺 Tv por cable</li>
+                <li>🛏️ Ropa de cama y toallas incluidas</li>
+                <li>🚗 Estacionamiento gratuito</li>
+                <li>❄️ Aire acondicionado</li>
+                <li>☕ Cafetera y utensilios de cocina</li>
+                <li>🧴 Artículos de aseo personal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 3: Galería -->
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="panel-galeria">
+            <span class="accordion-title">📸 Galería</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body" id="panel-galeria" role="region" aria-labelledby="header-galeria">
+            <div class="accordion-content">
+              <!-- Galería mejorada -->
+              <div class="gallery-enhanced">
+                <!-- Imagen principal con navegación -->
+                <div class="gallery-viewer">
+                  <button class="gallery-btn gallery-btn-prev" aria-label="Foto anterior" title="Anterior">
+                    <span>‹</span>
+                  </button>
+                  <div class="gallery-main-container">
+                    <img id="gallery-main-img" src="/imagenes/com1.jpg" alt="Vista del alojamiento" class="gallery-main-img" />
+                    <div class="gallery-counter">
+                      <span id="gallery-current">1</span> / <span id="gallery-total">18</span>
+                    </div>
+                  </div>
+                  <button class="gallery-btn gallery-btn-next" aria-label="Siguiente foto" title="Siguiente">
+                    <span>›</span>
+                  </button>
+                </div>
+
+                <!-- Miniaturas con scroll horizontal -->
+                <div class="gallery-thumbs-container">
+                  <div class="gallery-thumbs-wrapper">
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/com0.png" data-large="/imagenes/com0.png" alt="Sala" data-index="0" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/com8.jpeg" data-large="/imagenes/com8.jpeg" alt="Sala" data-index="1" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/com5.jpeg" data-large="/imagenes/com5.jpeg" alt="Sala" data-index="2" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/com11.jpeg" data-large="/imagenes/com11.jpeg" alt="Sala" data-index="3" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/com13.jpeg" data-large="/imagenes/com13.jpeg" alt="Sala" data-index="4" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/baño1.jpeg" data-large="/imagenes/baño1.jpeg" alt="Baño" data-index="5" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/baño2.jpeg" data-large="/imagenes/baño2.jpeg" alt="Baño" data-index="6" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/baño3.jpeg" data-large="/imagenes/baño3.jpeg" alt="Baño" data-index="7" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/baño4.jpeg" data-large="/imagenes/baño4.jpeg" alt="Baño" data-index="8" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/coci1.jpeg" data-large="/imagenes/coci1.jpeg" alt="Cocina" data-index="9" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/coci2.jpeg" data-large="/imagenes/coci2.jpeg" alt="Cocina" data-index="10" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/coci3.jpeg" data-large="/imagenes/coci3.jpeg" alt="Cocina" data-index="11" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/coci4.jpeg" data-large="/imagenes/coci4.jpeg" alt="Cocina" data-index="12" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/hab1.jpeg" data-large="/imagenes/hab1.jpeg" alt="Habitación" data-index="13" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/hab2.jpeg" data-large="/imagenes/hab2.jpeg" alt="Habitación" data-index="14" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/hab3.jpeg" data-large="/imagenes/hab3.jpeg" alt="Habitación" data-index="15" />
+                    <img class="gallery-thumb" tabindex="0" role="button" src="/imagenes/hab4.jpeg" data-large="/imagenes/hab4.jpeg" alt="Habitación" data-index="16" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
