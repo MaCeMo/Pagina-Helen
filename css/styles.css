@@ -133,48 +133,124 @@ img{display:block;max-width:100%;height:auto}
 .nav-menu a:hover{background:rgba(255,255,255,0.10);transform:translateY(-1px);box-shadow:inset 0 -3px 0 rgba(255,255,255,0.03)}
 
 @media (max-width:768px){
-  #site-header{height:auto;min-height:60px;padding-top:.45rem;padding-bottom:.45rem}
-  .site-top{flex-wrap:nowrap;align-items:center;gap:.5rem}
-  .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+  #site-header {
+    height:auto;
+    min-height:60px;
+    padding:0.45rem 1rem;
+    position: relative;
+  }
 
-  .nav-menu{width:100%;background:var(--primary);overflow:hidden;max-height:0;opacity:0;transition:max-height .34s cubic-bezier(.2,.9,.2,1),opacity .2s ease;border-radius:0 0 12px 12px;margin-top:.6rem}
-  .nav-menu ul{flex-direction:column;gap:0;padding:0;margin:0}
-  .nav-menu li{width:100%}
-  .nav-menu a{display:block;padding:.9rem 1rem;width:100%;border-bottom:1px solid rgba(255,255,255,0.06)}
-  .nav-menu.nav-menu--open{max-height:420px;opacity:1}
+  .site-top {
+    flex-wrap:nowrap;
+    align-items:center;
+    justify-content:space-between; /* logo a la izquierda, toggle a la derecha */
+    gap:.5rem;
+  }
+
+  .nav-toggle {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    right:1rem;   /* lo coloca a la derecha */
+    top:0.75rem;  /* lo baja un poco */
+    z-index:1001;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top:0;
+    right:0;
+    width:250px;              /* ancho del menú */
+    height:100%;              /* ocupa toda la altura */
+    background-color:#8a8f92; /* gris */
+    transform:translateX(100%); /* oculto por defecto */
+    transition:transform 0.3s ease;
+    z-index:1000;
+    padding-top:3rem;         /* espacio para la cruz */
+  }
+
+  .nav-menu ul {
+    flex-direction:column;
+    gap:0;
+    padding:0;
+    margin:0;
+  }
+
+  .nav-menu li {width:100%}
+
+  .nav-menu a {
+    display:block;
+    padding:.9rem 1rem;
+    width:100%;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    color:white;
+  }
+
+  .nav-menu.nav-menu--open {
+    transform:translateX(0); /* aparece desde la derecha */
+  }
+
+  .close-menu {
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    background:none;
+    border:none;
+    color:white;
+    font-size:1.5rem;
+    cursor:pointer;
+    z-index:1002;
+  }
 }
 
 /* Hero */
 .hero{height:60vh;display:grid;align-items:center;border-radius:0 0 18px 18px;background-image:url('https://images.unsplash.com/photo-1502920917128-1aa500764b6d?auto=format&fit=crop&w=1650&q=80');background-size:cover;background-position:center;color:white}
+
 .hero-content {
   background: none;
   padding: 2rem;
   border-radius: 0;
   width: min(720px, 95%);
-  margin-left: 3rem;
+  margin: 0 auto;         /* centrado */
+  text-align: center;
 }
-.hero h1,
+
+
+.hero h1 {
+  font-size: 2.6rem;          /* más grande */
+  color: #ffffff;             /* blanco puro */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* sombra más marcada */
+  margin-bottom: 1rem;
+}
+
 .hero p {
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-size: 1.3rem;          /* más grande que antes */
+  color: #f0f0f0;             /* gris claro */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  margin-bottom: 1.5rem;
 }
 
 /* Buttons */
-.btn{display:inline-block;background:var(--primary);color:white;padding:.6rem 1rem;border-radius:8px;text-decoration:none;border:none;cursor:pointer;box-shadow:var(--shadow)}
-.btn.ghost{background:transparent;border:2px solid var(--primary);color:var(--primary)}
-
-/* Intro */
-.intro{
-  position: relative;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 245, 245, 0.98) 100%);
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  margin: 2rem 0;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  animation: slideInUp 0.6s ease-out;
+.btn {
+  background: #4a4a4a;   /* gris oscuro */
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
+
+.btn:hover {
+  background: #2f2f2f;
+  transform: translateY(-2px);
+}
+
 
 /* Página 404: centrar contenido dentro del main (usa .container existente) */
 .error-404 .center-panel{
