@@ -343,11 +343,31 @@ img{display:block;max-width:100%;height:auto}
 
 /* Gallery */
 .gallery{margin-top:1rem}
+
 .gallery-main img{width:100%;height:auto;border-radius:8px;display:block}
+
 .gallery-thumbs{display:flex;gap:.5rem;margin-top:.6rem}
-.gallery-thumbs .thumb{width:120px;height:80px;object-fit:cover;border-radius:6px;cursor:pointer;opacity:0.85;transition:transform .18s ease,opacity .18s ease,box-shadow .18s ease}
-.gallery-thumbs .thumb:hover{opacity:1;transform:scale(1.02)}
-.gallery-thumbs .thumb.active{outline:3px solid rgba(255,255,255,0.9);box-shadow:0 6px 20px rgba(0,0,0,0.14);transform:scale(1.03)}
+
+.gallery-thumbs-wrapper .gallery-thumb {
+  height: 180px !important;          
+  width: auto;            
+  object-fit: cover !important;      
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
+}
+
+.gallery-thumbs-wrapper .gallery-thumb:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.gallery-thumbs-wrapper .gallery-thumb.active {
+  outline: 3px solid rgba(255,255,255,0.9);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+  transform: scale(1.03);
+}
 
 /* Galería Mejorada */
 .gallery-enhanced{
@@ -1017,4 +1037,11 @@ main .intro {
   .accordion-content li{
     font-size: 0.85rem;
   }
+}
+
+.btn-center {
+  display: block;       /* lo convierte en bloque */
+  margin: 1.5rem auto;  /* auto lo centra horizontalmente */
+  text-align: center;   /* asegura que el texto quede centrado */
+  width: fit-content;   /* el ancho se ajusta al contenido */
 }
