@@ -90,7 +90,7 @@
     });
   }
 
-  
+  // Inicializa galería de imágenes con funcionalidad de miniaturas, navegación y contador
   function initGallery(){
     const mainImg = document.getElementById('gallery-main-img');
     const thumbs = Array.from(document.querySelectorAll('.gallery-thumb'));
@@ -202,6 +202,7 @@
         return;
       }
 
+    
       // Simulamos confirmación sin recargar
       msg.className = 'message success';
       msg.innerHTML = `<strong>Reserva confirmada</strong><p>Gracias ${name}. Hemos registrado la reserva del ${checkin} al ${checkout} para ${guests} huéspedes. Te contactaremos a ${email} para más detalles.</p>`;
@@ -297,7 +298,7 @@
     });
   }
 
-  // Document ready
+  // Inicialización al cargar la página
   document.addEventListener('DOMContentLoaded', () =>{
     renderHeaderFooter();
     initNavToggle();
