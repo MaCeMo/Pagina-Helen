@@ -47,7 +47,7 @@
       footer.innerHTML = `
         <div class="site-footer-inner">
           <div>© ${new Date().getFullYear()} Helen Aloja</div>
-          <div>Contacto: <a href="mailto:info@helenaloja.com">info@helenaloja.com</a></div>
+          <div>Contacto: info@helenaloja.com</div>
         </div>`;
     }
   }
