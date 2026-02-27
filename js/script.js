@@ -68,7 +68,7 @@
           header.setAttribute('aria-expanded', 'false');
           body.setAttribute('aria-hidden', 'true');
         } else {
-          // Cerrar otros acordeones (opcional: comentar si se quiere permitir múltiples abiertos)
+          // Cerrar otros acordeones 
           headers.forEach(h => {
             h.setAttribute('aria-expanded', 'false');
             h.parentElement.querySelector('.accordion-body').setAttribute('aria-hidden', 'true');
@@ -169,6 +169,7 @@
     const msg = document.getElementById('booking-message');
     if(!form) return;
 
+    // Recoge los datos del formulario 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       msg.innerHTML = '';
@@ -217,6 +218,7 @@
     const msg = document.getElementById('contact-message');
     if(!form) return;
 
+    // Validación y simulación de envío sin recargar la página
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       msg.innerHTML = '';
@@ -225,6 +227,7 @@
       const email = (data.get('email')||'').trim();
       const message = (data.get('message')||'').trim();
 
+      // Validaciones del formulario de contacto
       const errors = [];
       if(!name) errors.push('El nombre es obligatorio.');
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) errors.push('Ingresa un email válido.');
@@ -267,7 +270,7 @@
       }
     });
 
-    // cerrar si se redimensiona a desktop
+    // cerrar si se redimensiona a escritorio
     window.addEventListener('resize', function (){
       if(window.innerWidth > 768 && nav.classList.contains('nav-menu--open')){
         nav.classList.remove('nav-menu--open');
