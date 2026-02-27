@@ -265,7 +265,8 @@
       if(e.key === 'Escape' && nav.classList.contains('nav-menu--open')){
         nav.classList.remove('nav-menu--open');
         btn.setAttribute('aria-expanded', 'false');
-        const icon = btn.querySelector('.nav-toggle__icon'); if(icon) icon.textContent = '☰';
+        const icon = btn.querySelector('.nav-toggle__icon'); 
+        if(icon) icon.textContent = '☰';
         btn.focus();
       }
     });
@@ -275,7 +276,8 @@
       if(window.innerWidth > 768 && nav.classList.contains('nav-menu--open')){
         nav.classList.remove('nav-menu--open');
         btn.setAttribute('aria-expanded', 'false');
-        const icon = btn.querySelector('.nav-toggle__icon'); if(icon) icon.textContent = '☰';
+        const icon = btn.querySelector('.nav-toggle__icon'); 
+        if(icon) icon.textContent = '☰';
       }
     });
   }

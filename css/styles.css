@@ -1,6 +1,6 @@
 /* styles.css - Estilos globales para Helen Aloja */
 :root{
-  --primary:#8a8f92; /* color cálido principal */
+  --primary:#8a8f92;
   --accent: #8a8f92;
   --bg:#fefefe;
   --muted: #fbc044;
@@ -9,11 +9,17 @@
   --shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0}
+*{
+  box-sizing:border-box
+}
+
+html,body{
+  height:100%;
+  margin:0;
+}
 
 body{
-  margin:0;
+ 
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-image:url('../imagenes/fondoh.png');
   background-repeat: no-repeat;
